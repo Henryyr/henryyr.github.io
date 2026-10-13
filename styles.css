@@ -370,50 +370,40 @@ footer a:hover {
     }
 }
 .experience {
-    border-top: 1px solid var(--line);
-    padding: 28px 0 31px;
+    padding-bottom: 7px;
 }
 
 .experience-list {
-    margin-top: 14px;
+    margin-top: 9px;
 }
 
-.experience-item {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 14px 0;
+.experience-list article + article {
     border-top: 1px solid var(--line);
 }
 
-.experience-role {
-    font-size: 14px;
-    font-weight: 550;
-    color: var(--ink);
-    line-height: 1.6;
+.experience-row {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    align-items: center;
+    gap: 17px;
+    padding: 22px 0;
 }
 
-.experience-company {
-    font-family: var(--mono);
-    font-size: 10px;
+.experience-row p {
+    font-size: 12px;
     color: var(--muted);
-    line-height: 2.2;
-    text-align: right;
+    line-height: 1.8;
+    margin-top: 6px;
 }
 
 @media (max-width: 600px) {
-    .experience {
-        padding: 24px 0 28px;
+    .experience-row {
+        grid-template-columns: 19px minmax(0, 1fr);
+        gap: 11px;
+        padding: 20px 0;
     }
 
-    .experience-item {
-        display: block;
-        padding: 13px 0;
-    }
-
-    .experience-company {
-        margin-top: 3px;
-        text-align: left;
-        line-height: 1.8;
+    .experience-row p {
+        font-size: 12px;
     }
 }

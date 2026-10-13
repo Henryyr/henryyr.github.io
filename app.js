@@ -20,14 +20,6 @@ const translations = {
     description:
       "Henry Yusuf Rizaldy — Backend Developer & QA. Profil dan proyek pilihan dari GitHub.",
     experienceTitle: "Pengalaman",
-    experienceCurrent: "Saat ini",
-    experienceRole: "Peran",
-    experienceBlip:
-      "Mengerjakan aplikasi mobile dengan fokus pada alur produk, integrasi data, dan kualitas rilis.",
-    experienceBackend:
-      "Membangun API, merancang logika bisnis, mengelola database, dan menguji alur backend untuk aplikasi web dan mobile.",
-    experienceHarmoni:
-      "Membantu pengembangan aplikasi mobile, memperbaiki tampilan, dan menyesuaikan fitur berdasarkan kebutuhan produk.",
   },
   en: {
     skip: "Skip to content",
@@ -49,14 +41,6 @@ const translations = {
     description:
       "Henry Yusuf Rizaldy — Backend Developer & QA. Profile and selected GitHub projects.",
     experienceTitle: "Experience",
-    experienceCurrent: "Current",
-    experienceRole: "Role",
-    experienceBlip:
-      "Worked on mobile applications with a focus on product flows, data integration, and release quality.",
-    experienceBackend:
-      "Built APIs, designed business logic, managed databases, and tested backend flows for web and mobile applications.",
-    experienceHarmoni:
-      "Supported mobile app development, improved interfaces, and adjusted features based on product needs.",
   },
 };
 let language = "id";
