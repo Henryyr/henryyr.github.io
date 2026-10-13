@@ -4,84 +4,173 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ffffff" />
+
         <meta
             name="description"
             content="Henry Yusuf Rizaldy — Backend Developer & QA. Profil dan proyek pilihan dari GitHub."
         />
+
         <meta
             property="og:title"
             content="Henry Yusuf Rizaldy — Backend & QA"
         />
+
         <meta
             property="og:description"
             content="Profil dan proyek pilihan dari GitHub."
         />
+
         <meta property="og:type" content="website" />
+
         <meta
             property="og:url"
             content="https://henry-yusuf-backend.civilbead16.chatgpt.site"
         />
+
         <link
             rel="canonical"
             href="https://henry-yusuf-backend.civilbead16.chatgpt.site"
         />
+
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+        <!-- Set theme before the stylesheet loads -->
+        <script>
+            (() => {
+                let theme;
+
+                try {
+                    theme = localStorage.getItem("henry-theme");
+                } catch {
+                    // Storage is optional.
+                }
+
+                if (theme !== "light" && theme !== "dark") {
+                    theme = window.matchMedia("(prefers-color-scheme: dark)")
+                        .matches
+                        ? "dark"
+                        : "light";
+                }
+
+                document.documentElement.dataset.theme = theme;
+
+                document.querySelector('meta[name="theme-color"]').content =
+                    theme === "dark" ? "#141a17" : "#ffffff";
+            })();
+        </script>
+
         <link rel="stylesheet" href="styles.css" />
+
         <title>Henry Yusuf Rizaldy — Backend & QA</title>
+
+        <!-- Data must load before app.js -->
+        <script src="experiences.js" defer></script>
+        <script src="app.js" defer></script>
     </head>
+
     <body>
-        <a class="skip" href="#main" data-i18n="skip">Langsung ke konten</a>
+        <a class="skip" href="#main" data-i18n="skip"> Langsung ke konten </a>
+
         <div class="page">
+            <!-- HEADER -->
             <header class="header">
-                <a href="#" class="brand" aria-label="Henry Yusuf — home"
-                    >h<span>.</span></a
-                >
+                <a href="#" class="brand" aria-label="Henry Yusuf — home">
+                    h<span>.</span>
+                </a>
+
                 <div class="header-actions">
                     <a
                         class="header-link"
                         href="https://github.com/Henryyr"
                         target="_blank"
                         rel="noopener noreferrer"
-                        >@henryyr <span aria-hidden="true">↗</span></a
-                    ><button
+                    >
+                        @henryyr
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <!-- THEME TOGGLE -->
+                    <button
+                        id="theme-button"
+                        class="theme-toggle"
+                        type="button"
+                        aria-label="Aktifkan mode gelap"
+                        title="Ganti tema"
+                    >
+                        <svg
+                            class="theme-icon"
+                            width="17"
+                            height="17"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path
+                                d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"
+                            ></path>
+                        </svg>
+                    </button>
+
+                    <!-- LANGUAGE TOGGLE -->
+                    <button
                         id="language-button"
                         class="language"
+                        type="button"
                         aria-label="Switch to English"
                     >
-                        <span id="language-id" class="active">ID</span
-                        ><span class="divider">/</span
-                        ><span id="language-en">EN</span>
+                        <span id="language-id" class="active">ID</span>
+                        <span class="divider">/</span>
+                        <span id="language-en">EN</span>
                     </button>
                 </div>
             </header>
+
             <main id="main">
+                <!-- INTRODUCTION -->
                 <section class="intro" aria-labelledby="name">
                     <p class="role">Programmer</p>
+
                     <h1 id="name">Henry Yusuf Rizaldy<span>.</span></h1>
+
                     <p class="bio" data-i18n="bio">
                         Saya membangun API, merangkai logika bisnis, dan menguji
                         aplikasi. Fokus pada kode yang jelas dan sistem yang
                         mudah dirawat.
                     </p>
+
                     <p class="education">
-                        <span data-i18n="education">Manajemen Informatika</span
-                        ><span aria-hidden="true"> · </span>Politeknik Negeri
-                        Bali
+                        <span data-i18n="education">
+                            Manajemen Informatika
+                        </span>
+                        <span aria-hidden="true"> · </span>
+                        Politeknik Negeri Bali
                     </p>
+
                     <div class="socials">
                         <a
                             href="https://github.com/Henryyr"
                             target="_blank"
                             rel="noopener noreferrer"
-                            >GitHub <span aria-hidden="true">↗</span></a
-                        ><a
+                        >
+                            GitHub <span aria-hidden="true">↗</span>
+                        </a>
+
+                        <a
                             href="https://www.linkedin.com/in/henry-yusuf-rizaldy-9451252aa/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            >LinkedIn <span aria-hidden="true">↗</span></a
                         >
+                            LinkedIn <span aria-hidden="true">↗</span>
+                        </a>
                     </div>
                 </section>
+
+                <!-- EXPERIENCE -->
                 <section class="experience" aria-labelledby="experience-title">
                     <div class="section-heading">
                         <h2 id="experience-title" data-i18n="experienceTitle">
@@ -89,38 +178,11 @@
                         </h2>
                     </div>
 
-                    <div class="experience-list">
-                        <article class="experience-row">
-                            <span class="project-number" aria-hidden="true"
-                                >01</span
-                            >
-                            <div>
-                                <h3>Mobile Developer</h3>
-                                <p>PT Blip Integrator Provider</p>
-                            </div>
-                        </article>
-
-                        <article class="experience-row">
-                            <span class="project-number" aria-hidden="true"
-                                >02</span
-                            >
-                            <div>
-                                <h3>Backend Developer</h3>
-                                <p>PT Blip Integrator Provider</p>
-                            </div>
-                        </article>
-
-                        <article class="experience-row">
-                            <span class="project-number" aria-hidden="true"
-                                >03</span
-                            >
-                            <div>
-                                <h3>Mobile Developer Intern</h3>
-                                <p>PT. Harmoni Permata</p>
-                            </div>
-                        </article>
-                    </div>
+                    <!-- Generated from experiences.js -->
+                    <div id="experience-list" class="experience-list"></div>
                 </section>
+
+                <!-- PROJECTS -->
                 <section
                     class="projects"
                     id="projects"
@@ -130,156 +192,192 @@
                         <h2 id="projects-title" data-i18n="projectsTitle">
                             Proyek pilihan
                         </h2>
+
                         <a
                             href="https://github.com/Henryyr?tab=repositories"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><span data-i18n="allRepos">Lihat semua</span
-                            ><span aria-hidden="true"> ↗</span></a
                         >
+                            <span data-i18n="allRepos"> Lihat semua </span>
+                            <span aria-hidden="true"> ↗</span>
+                        </a>
                     </div>
+
                     <div class="project-list">
+                        <!-- SHE SALON -->
                         <article>
                             <a
                                 class="project"
                                 href="https://github.com/Henryyr/she_backend"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                ><span class="project-number" aria-hidden="true"
-                                    >01</span
-                                >
+                            >
+                                <span class="project-number" aria-hidden="true">
+                                    01
+                                </span>
+
                                 <div>
                                     <h3>She Salon</h3>
+
                                     <p data-i18n="salon">
                                         Backend booking salon dengan voucher,
                                         stok produk, dan pembayaran Midtrans.
                                     </p>
+
                                     <p class="stack">
                                         Express.js · Bun · MySQL · Midtrans
                                     </p>
                                 </div>
-                                <span class="arrow" aria-hidden="true"
-                                    >↗</span
-                                ></a
-                            >
+
+                                <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
                         </article>
+
+                        <!-- NEST VILLA -->
                         <article>
                             <a
                                 class="project"
                                 href="https://github.com/Henryyr/nest-villa"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                ><span class="project-number" aria-hidden="true"
-                                    >02</span
-                                >
+                            >
+                                <span class="project-number" aria-hidden="true">
+                                    02
+                                </span>
+
                                 <div>
                                     <h3>Nest Villa</h3>
+
                                     <p data-i18n="villa">
                                         API penyewaan properti dengan
                                         autentikasi, hak akses, booking, dan
                                         favorit.
                                     </p>
+
                                     <p class="stack">
                                         NestJS · TypeScript · Prisma ·
                                         PostgreSQL
                                     </p>
                                 </div>
-                                <span class="arrow" aria-hidden="true"
-                                    >↗</span
-                                ></a
-                            >
+
+                                <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
                         </article>
+
+                        <!-- GAET MOBILE -->
                         <article>
                             <a
                                 class="project"
                                 href="https://github.com/Henryyr/Gaet-Mobile"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                ><span class="project-number" aria-hidden="true"
-                                    >03</span
-                                >
+                            >
+                                <span class="project-number" aria-hidden="true">
+                                    03
+                                </span>
+
                                 <div>
                                     <h3>Gaet Mobile</h3>
+
                                     <p data-i18n="gaet">
                                         Aplikasi katalog dan portofolio untuk
                                         driver serta guide wisata.
                                     </p>
+
                                     <p class="stack">
                                         Kotlin · Jetpack Compose · Firebase
                                     </p>
                                 </div>
-                                <span class="arrow" aria-hidden="true"
-                                    >↗</span
-                                ></a
-                            >
+
+                                <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
                         </article>
+
+                        <!-- REALTIME LEADERBOARD -->
                         <article>
                             <a
                                 class="project"
                                 href="https://github.com/Henryyr/leaderboard-realtime"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                ><span class="project-number" aria-hidden="true"
-                                    >04</span
-                                >
+                            >
+                                <span class="project-number" aria-hidden="true">
+                                    04
+                                </span>
+
                                 <div>
                                     <h3>Realtime Leaderboard</h3>
+
                                     <p data-i18n="leaderboard">
                                         Eksperimen peringkat real-time dengan
                                         Redis dan koneksi WebSocket.
                                     </p>
+
                                     <p class="stack">
                                         Go · Fiber · Redis · WebSocket
                                     </p>
                                 </div>
-                                <span class="arrow" aria-hidden="true"
-                                    >↗</span
-                                ></a
-                            >
+
+                                <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
                         </article>
+
+                        <!-- INVENTORY API -->
                         <article>
                             <a
                                 class="project"
                                 href="https://github.com/Henryyr/backend-inventory-study"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                ><span class="project-number" aria-hidden="true"
-                                    >05</span
-                                >
+                            >
+                                <span class="project-number" aria-hidden="true">
+                                    05
+                                </span>
+
                                 <div>
                                     <h3>Inventory API</h3>
+
                                     <p data-i18n="inventory">
                                         Proyek belajar pengelolaan item, stok,
                                         dan pengguna dengan NestJS dan Prisma.
                                     </p>
+
                                     <p class="stack">
                                         NestJS · Prisma · PostgreSQL
                                     </p>
                                 </div>
-                                <span class="arrow" aria-hidden="true"
-                                    >↗</span
-                                ></a
-                            >
+
+                                <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
                         </article>
                     </div>
                 </section>
+
+                <!-- TOOLS -->
                 <section class="tools" aria-labelledby="tools-title">
                     <h2 id="tools-title" data-i18n="toolsTitle">
                         Tools sehari-hari
                     </h2>
+
                     <p>
                         TypeScript <span>/</span> Node.js <span>/</span> NestJS
                         <span>/</span> Express <span>/</span> PostgreSQL
                         <span>/</span> Redis <span>/</span> Docker
-                        <span>/</span> Postman <span>/</span> Jest
+                        <span>/</span> Postman <span>/</span>
+                        Jest
                     </p>
                 </section>
             </main>
+
+            <!-- FOOTER -->
             <footer>
-                <span>© <span id="year">2026</span> Henry Yusuf Rizaldy</span
-                ><a href="#" data-i18n="backTop">Ke atas ↑</a>
+                <span>
+                    © <span id="year">2026</span>
+                    Henry Yusuf Rizaldy
+                </span>
+
+                <a href="#" data-i18n="backTop"> Ke atas ↑ </a>
             </footer>
         </div>
-        <script src="app.js" defer></script>
     </body>
 </html>
