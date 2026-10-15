@@ -622,6 +622,10 @@ footer a:hover {
 }
 
 .report-content h3 span {
+    color: inherit;
+}
+
+.report-content h3 span:last-child {
     color: var(--green);
 }
 
