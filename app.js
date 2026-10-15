@@ -25,6 +25,12 @@ const translations = {
     description:
       "Henry Yusuf Rizaldy — Backend Developer & QA. Profil dan proyek pilihan dari GitHub.",
     experienceTitle: "Pengalaman",
+    reportTitle: "Laporan pekerjaan",
+    reportHeading: "Di balik setiap baris kode",
+    reportDescription:
+      "Dokumentasi pekerjaan dan kontribusi pengembangan aplikasi selama Januari–September 2026. Mencakup pengembangan backend, aplikasi mobile, serta dashboard.",
+    reportCaption: "Karya pilihan · 2026",
+    reportButton: "Lihat laporan",
   },
 
   en: {
@@ -47,6 +53,12 @@ const translations = {
     description:
       "Henry Yusuf Rizaldy — Backend Developer & QA. Profile and selected GitHub projects.",
     experienceTitle: "Experience",
+    reportTitle: "Work report",
+    reportHeading: "A look into the work behind the code",
+    reportDescription:
+      "A documentation of my work and contributions to application development from January to September 2026, covering backend development, mobile applications, and dashboard development.",
+    reportCaption: "Selected work · 2026",
+    reportButton: "View report",
   },
 };
 
